@@ -3,205 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bernardo Estevam - Bioinformatician</title>
+    <title>Bernardo - Web Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/icon.ico">
 </head>
 <body>
-    <div class="container-full">
-    <!-- Header Section -->
-    <header>
-        <div class="left">
-            <h1>Bernardo Estevam</h1>
-            <p>PhD Student | Bioinformatician | Researcher</p>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="" class="logo">Bernardo<span class="accent"> Estevam</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Tech Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="btn-primary">Get in contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <div class="right">
-            <img src="images/bernardo.png">
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <img src="images/bernardo.png"><br>
+            <span class="tagline">Bioinformatician, Automation & Data Analyst</span>
+            <h1>Transforming noisy biological data into <span class="text-gradient">functional insights</span>.</h1>
+            <p>From biology and neuroscience, specializing in Python automations, interactive dashboards and applications that save time and drive decisions with background in data filtering and processing.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
         </div>
     </header>
 
-    <!-- Progress Bar -->
-    <div id="progress-bar"></div>
-    
-    <div class="container">
-        <!-- About Me Section -->
-        <section>
-            <h2>About Me</h2>
-            <p>Hello, I'm Bernardo Estevam, a bioinformatician passionate about utilizing computational tools to analyze and interpret biological data. With expertise in data analysis, statistical models, and machine learning, I aim to bridge the gap between biology and technology to advance research in genomics and health.</p>
-        </section>
-
-        <!-- Skills Section -->
-        <section>
-            <h2>Skills</h2>
-            <div class="card">
-                <h3>Programming</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>R</li>
-                    <li>JavaScript</li>
-                    <li>SQL</li>
-                    <li>Bash/Shell Scripting</li>
-                </ul>
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I am a bioinformatics developer who  mainly bridges the gap between biological raw data and actionable research logic. My focus is on removing manual bottlenecks.</p>
+                    <p>Whether it's automating tedious processes, filtering various types of data, perform extensive statistical analysis, I am able to develop apps and build systems that work and make sense in a analytical and biological standapoint.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>100+</h3>
+                        <p>Hours Saved</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>5</h3>
+                        <p>Pipelines Built</p>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Most known Programming libraries (Python)</h3>
-                <ul>
-                    <li>Numpy</li>
-                    <li>Pandas</li>
-                    <li>Matplotlib</li>
-                    <li>Seaborne</li>
-                    <li>Selenium</li>
-                    <li>Streamlit</li>
-                    <li>Scikit-lean</li>
-                    <li>Beautiful Soup</li>
-                    <li>Tensorflow</li>
-                    <li>...many more</li>
-                </ul>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-dark section-padding">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Data Analysis</h3>
+                    <div class="skill-tags">
+                        <span>Python (Pandas/NumPy)</span>
+                        <span>SQL (PostgreSQL)</span>
+                        <span>Excel/VBA</span>
+                        <span>R</span>
+                        <span>SPSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Visualization</h3>
+                    <div class="skill-tags">
+                        <span>Streamlit</span>
+                        <span>JupyterLab</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>
+                        <span>Plotly</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Automation</h3>
+                    <div class="skill-tags">
+                        <span>Selenium</span>
+                        <span>BeautifulSoup</span>
+                        <span>Zapier</span>
+                        <span>Cron Jobs</span>
+                        <span>APIs</span>
+                        <span>PyAutoGUI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span>PyTorch</span>
+                        <span>Tensorflow</span>
+                        <span>Scikit-learn</span>
+                        <span>Keras</span>
+                        <span>SciPy</span>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Most known Programming libraries (R)</h3>
-                <ul>
-                    <li>Dplyr</li>
-                    <li>Ggplot2</li>
-                    <li>Tidyr</li>
-                    <li>Plotly</li>
-                    <li>Stringr</li>
-                    <li>Readr</li>
-                    <li>Jsonlite</li>
-                    <li>...and some others</li>
-                </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-dna"></i>
+                        <h4>PolyQ Database</h4>
+                    </div>
+                    <p>A django application connected to a Microsoft SQL server database that has valid and updated information on the 9 existant polyglutamine diseases. From common knowledge about these diseases to their more complex genetic and molecular mechanisms.</p>
+                    <div class="card-tags">
+                        <span>Python/Django</span>
+                        <span>MSSQL</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="https://polyq.pt/" target="_blank" class="card-link">Visit PolyQ <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="mouse-icon">&#128045;</span>
+                        <h4>Mouseframe</h4>
+                    </div>
+                    <p>A web application (with desktop app available) that accepts digitized images of walking pattern footprints from mice. Walking footprint analysis from the animals is important since it returns several measurements of interest for research. Click below for more information.</p>
+                    <div class="card-tags">
+                        <span>Python/Django</span>
+                        <span>JavaScript/Ajax</span>
+                        <span>PostgreSQL</span>
+                        <span>Auth/Google ReCaptcha V3</span>
+                    </div>
+                    <a href="https://mouseframe.pt/" target="_blank" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fas fa-database"></i>
+                        <h4>ETL Pipeline for CRM</h4>
+                    </div>
+                    <p>Automated pipeline that cleans, transforms, and loads customer data from CSV dumps into a Snowflake Data Warehouse every night.</p>
+                    <div class="card-tags">
+                        <span>Airflow</span>
+                        <span>Python</span>
+                        <span>Snowflake</span>
+                    </div>
+                    <a href="#" class="card-link">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+
             </div>
-            <div class="card">
-                <h3>Exclusive bioinformatic tools</h3>
-                <ul>
-                    <li>BLAST</li>
-                    <li>Bowtie</li>
-                    <li>GATK</li>
-                    <li>Bioconductor</li>
-                    <li>Galaxy</li>
-                </ul>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Experience Section -->
-        <section>
-            <h2>Experience</h2>
-            <div class="card">
-                <h3>Researcher and PhD student</h3>
-                <ul>
-                    <li>Led genomics research projects using NGS data.</li>
-                    <li>Developed custom algorithms for data analysis and interpretation.</li>
-                    <li>Collaborated with cross-disciplinary teams to design experiments and analyze results.</li>
-                    <li>Published 3 papers in peer-reviewed journals.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Bioinformatic services provider</h3>
-                <ul>
-                    <li>Analyzed large-scale genomics datasets to uncover biomarkers for disease detection.</li>
-                    <li>Built machine learning models for gene expression prediction.</li>
-                    <li>Automated data pipelines for real-time analysis and reporting.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section>
-            <h2>Education</h2>
-            <div class="card">
-                <h3>Master's in Biomedical Sciences</h3>
-                <p>University of Algarve, Portugal (2020 - 2022)</p>
-            </div>
-            <div class="card">
-                <h3>Bachelor's in Biomedical Sciences</h3>
-                <p>University of Algarve, Portugal (2016 - 2020)</p>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section>
-            <h2>Contact</h2>
-            <p>If you're interested in connecting or discussing potential collaborations, feel free to reach out to me!</p>
-            <p>University Email: <a href="mailto:a57405@ualg.pt">a57405@ualg.pt</a></p>
-        </section>
-        <section class="socials">
-            <h2>Socials</h2>
-            <li><a href="">LinkedIn</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </section>
-    </div>
-    <div class="to-top-button" id="toTop">
-        <span id="toTopBtn">&#10548;</span>
-    </div>
-
-</div>
-    <script>
-        // Function to update the progress bar on scroll
-        function updateProgressBar() {
-            // Get the current vertical scroll position (distance from top of the page)
-            var scrollPosition = window.scrollY;
-
-            // Get the total document height minus the visible part of the window (viewport)
-            var documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-            //document.documentElement.scrollHeight provides the total height of the document (including content that is off-screen, i.e., content that you can't see without scrolling).
-            //window.innerHeight gives the height of the visible area of the window (the viewport), which is how much of the page is actually visible at any given time.
-            //By subtracting window.innerHeight from document.documentElement.scrollHeight, we get the total scrollable height of the page, i.e., 
-            //the height of the entire content minus the portion that is already visible.
-
-            // Calculate the percentage of how much the user has scrolled
-            var scrollPercentage = (scrollPosition / documentHeight) * 100;
-            //The scrollPercentage variable represents how much of the page the user has scrolled as a percentage.
-            //By dividing the scrollPosition (the distance the user has scrolled) by the documentHeight (the total height of the document), we get the fraction of the page that’s been scrolled.
-            //Multiplying by 100 converts this fraction into a percentage.
-
-          
-
-            // Update the width of the progress bar based on the calculated percentage
-            document.getElementById('progress-bar').style.width = scrollPercentage + '%';
-        }
-
-        // Add scroll event listener to the window
-        window.addEventListener('scroll', updateProgressBar);
-
-       
-
-
-
-    </script>
-    <script>
-        let button = document.getElementById('toTopBtn');
+    <section id="contact" class="bg-dark section-padding">
+    <div class="container contact-wrapper">
+        <h2>Let's automate your workflow.</h2>
+        <p>Interested in collaborating or have a data problem to solve?</p>
         
-        button.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        })
-    </script>
-    <script>
-        // Function to show or hide the Scroll to Top button based on scroll position
-        function toggleScrollToTopButton() {
-            var scrollPosition = window.scrollY;
-            var documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+        <div class="social-links">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            
+            <a href="https://github.com/yourusername" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
 
-            // Show the button if the user has scrolled more than 40% of the page
-            if (scrollPosition / documentHeight > 0.30) {
-                document.getElementById('toTop').classList.add('visible');
-            } else {
-                document.getElementById('toTop').classList.remove('visible');
-            }
-        }
+            <div class="email-wrapper">
+                <button id="copyEmailBtn" class="btn-secondary">
+                    <i class="fas fa-envelope"></i> <span>Copy Email</span>
+                </button>
+                <div id="copyFeedback" class="tooltip">Copied!</div>
+            </div>
+        </div>
+    </div>
+    </section>
 
-        // Function to scroll smoothly to the top of the page
-      
+    <footer>
+        <p>&copy; <span id="year"></span> Bernardo Estevam Web Portfolio. Built with code.</p>
+    </footer>
 
-        // Add scroll event listener to show/hide the button
-        window.addEventListener('scroll', toggleScrollToTopButton);
-        
-
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

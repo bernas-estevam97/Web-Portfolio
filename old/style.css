@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: #186294;
+    width: 0%;
+    transition: width 0.2s ease-out;
+    z-index: 9999;
+}
+
+.container-full{
+    height: 1500px;
+    overflow: visible;
+}
+
+/* Header */
+header {
+    background: #2980b9;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    animation: headerFadeIn 1.2s ease-out;
+    display: flex;
+    justify-content: center;
+}
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    transform: translateY(-20px);
+    animation: bounceIn 1.4s cubic-bezier(0.68, -0.55, 0.27, 0.27) forwards;
+}
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    transform: translateY(-20px);
+    animation: bounceIn 1.4s cubic-bezier(0.68, -0.55, 0.27, 0.27) forwards;
+    animation-delay: 0.1s;
+}
+
+header .right{
+    transform: translateY(-20px);
+    animation: bounceIn 1.4s cubic-bezier(0.68, -0.55, 0.27, 0.27) forwards;
+    animation-delay: 0.1s;
+}
+
+header .right img{
+    width: 120px;
+    margin-left: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1.2s ease-out forwards 0.4s;
+}
+
+section p{
+    text-align: justify;
+}
+
+/* Section Styling */
+section {
+    background: #fff;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease-out forwards 0.5s;
+}
+
+/* Skills & Experience Cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    transform: translateY(-20px);
+    animation: slideFromLeft 1s ease-out forwards;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+    transform: translateY(-20px);
+    animation: slideFromLeft 1.2s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.card ul li {
+    margin-bottom: 0.8rem;
+}
+
+.to-top-button{
+    position: fixed;
+    pointer-events: none; 
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.to-top-button.visible{
+    opacity: 1; /* Fully visible */
+    pointer-events: auto; /* Allow clicking */
+    transform: translateY(0); /* Move to original position */
+    
+}
+
+.to-top-button span{
+    /*display: none; */
+    font-size: 3em;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    padding: 0 10px 0px 10px;
+    margin-right: 10px;
+    border: 3px solid #2980b9;
+    transition: box-shadow .25s ease-in;
+}
+
+.to-top-button span:hover{
+   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.active{
+    display: block;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card ul {
+        width: 45%;
+    }
+}
+
+/* Animations */
+@keyframes headerFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
