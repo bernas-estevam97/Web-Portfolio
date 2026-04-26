@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // --- Email Copy Functionality ---
-    const emailToCopy = "bernaz10.1997golden@gmail.com"; // <--- PUT YOUR EMAIL HERE
+    const emailToCopy = "bernaz.estevam97@gmail.com"; // <--- PUT YOUR EMAIL HERE
     const copyBtn = document.getElementById('copyEmailBtn');
     const feedback = document.getElementById('copyFeedback');
     const btnTextSpan = copyBtn.querySelector('span'); // Target the text span specifically
