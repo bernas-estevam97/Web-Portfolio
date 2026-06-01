@@ -21,30 +21,53 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// --- Email Copy Functionality ---
-    const emailToCopy = "bernaz.estevam97@gmail.com"; // <--- PUT YOUR EMAIL HERE
-    const copyBtn = document.getElementById('copyEmailBtn');
-    const feedback = document.getElementById('copyFeedback');
-    const btnTextSpan = copyBtn.querySelector('span'); // Target the text span specifically
 
-    if (copyBtn) {
-        copyBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(emailToCopy).then(() => {
-                // 1. Show the "Copied!" tooltip
-                feedback.classList.add('show');
-                
-                // 2. Change button style slightly to indicate success
-                btnTextSpan.textContent = "Email Copied";
-                copyBtn.style.borderColor = "#22d3ee"; // Brighter cyan
-                
-                // 3. Reset after 2 seconds
-                setTimeout(() => {
-                    feedback.classList.remove('show');
-                    btnTextSpan.textContent = "Copy Email";
-                    copyBtn.style.borderColor = ""; // Reset border
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
-        });
+const form = document.getElementById("contactForm");
+const result = document.getElementById("formResult");
+
+if (form) {
+form.addEventListener("submit", async function (e) {
+e.preventDefault();
+
+
+    const hCaptcha =
+        form.querySelector('[name="h-captcha-response"]')?.value;
+
+    if (!hCaptcha) {
+        result.innerHTML = "Please complete the captcha.";
+        return;
     }
+
+    result.innerHTML = "Sending...";
+
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(
+            "https://api.web3forms.com/submit",
+            {
+                method: "POST",
+                body: formData
+            }
+        );
+
+        const data = await response.json();
+
+        if (data.success) {
+            result.innerHTML = "Message sent successfully!";
+            form.reset();
+
+            if (window.hcaptcha) {
+                hcaptcha.reset();
+            }
+        } else {
+            result.innerHTML =
+                data.message || "Failed to send message.";
+        }
+    } catch (error) {
+        console.error(error);
+        result.innerHTML = "Network error.";
+    }
+});
+
+}
